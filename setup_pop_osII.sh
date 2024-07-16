@@ -36,6 +36,32 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "Instalando aplicativos via Flatpak..."
 flatpak install -y flathub io.atom.Atom
 flatpak install -y flathub com.wps.Office
+flatpak install -y flathub io.atom.Atom
+flatpak install -y flathub com.wps.Office
+flatpak install -y flathub org.flameshot.Flameshot
+flatpak install -y flathub com.getpostman.Postman
+flatpak install -y flathub rest.insomnia.Insomnia
+flatpak install -y flathub io.beekeeperstudio.Studio
+flatpak install -y flathub org.cudatext.CudaText
+flatpak install -y flathub io.dbeaver.DBeaverCommunity
+flatpak install -y flathub org.gaphor.Gaphor
+flatpak install -y flathub io.github.shiftey.Desktop
+flatpak install -y flathub com.sublimetext.three
+flatpak install -y flathub com.visualstudio.code
+flatpak install -y flathub com.ubisoft.UbisoftConnect
+flatpak install -y flathub org.blender.Blender
+flatpak install -y flathub org.gnome.dia
+flatpak install -y flathub org.inkscape.Inkscape
+flatpak install -y flathub com.masterpdfeditor.MasterPDFEditor
+flatpak install -y flathub com.cockos.reaper
+flatpak install -y flathub com.obsproject.Studio
+flatpak install -y flathub org.openshot.OpenShot
+flatpak install -y flathub info.smplayer.SMPlayer
+flatpak install -y flathub org.pitivi.Pitivi
+flatpak install -y flathub org.musescore.MuseScore
+flatpak install -y flathub org.pdfsam.Pdfsam
+flatpak install -y flathub com.google.Chrome
+flatpak install -y flathub com.vivaldi.Vivaldi
 
 # Adicionar repositório OpenJDK PPA e instalar o OpenJDK 21
 echo "Adicionando repositório OpenJDK PPA e instalando o OpenJDK 21..."
@@ -126,6 +152,21 @@ fi
 # Limpar a pasta de programas
 echo "Limpando a pasta de downloads..."
 rm -rf "$PROGRAMS_DIR"
+
+
+
+
+# ----------------------------- PÓS-INSTALAÇÃO ----------------------------- #
+## Finalização, atualização e limpeza##
+sudo apt update && sudo apt dist-upgrade -y
+flatpak update
+sudo apt autoclean
+sudo apt autoremove -y
+
+
+
+
+
 
 echo "Configuração concluída."
 
