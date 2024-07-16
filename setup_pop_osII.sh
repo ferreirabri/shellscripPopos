@@ -169,4 +169,3 @@ sudo apt autoremove -y
 
 
 echo "Configuração concluída."
-
